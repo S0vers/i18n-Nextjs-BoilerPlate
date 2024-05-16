@@ -17,6 +17,7 @@ This is a boilerplate project for Next.js applications that includes basic inter
 
 ```bash
 git clone https://github.com/S0vers/i18n-Nextjs-BoilerPlate.git
+```
 
 Install dependencies:
 bashCopy codecd next-boilerplate
@@ -43,6 +44,7 @@ jsxCopy codeimport OmitRTL from './OmitRTL';
 
 function MyComponent() {
 return (
+
   <div>
     <p>This text will follow the website's direction.</p>
     <OmitRTL omitRTL={true}>
@@ -66,4 +68,7 @@ Create a new Pull Request
 
 License
 This project is licensed under the MIT License.
+
+```
+
 ```
