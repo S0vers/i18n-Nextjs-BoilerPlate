@@ -2,15 +2,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale,
+} from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Simple BoilerPlate",
-  description: "Simple BoilerPlate for language switcher and theme switcher",
-};
+// export const metadata: Metadata = {
+//   title: "Simple BoilerPlate",
+//   description: "Simple BoilerPlate for language switcher and theme switcher",
+// };
 
 export default async function RootLayout({
   children,
@@ -46,4 +50,16 @@ const locales = ["en", "ar"];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+  };
 }

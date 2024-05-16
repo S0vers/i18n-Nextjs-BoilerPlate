@@ -1,5 +1,9 @@
 {
   "Index": {
     "title": "Hello world!"
+  },
+  "Metadata": {
+    "title": "Simple BoilerPlate",
+    "description": "Simple BoilerPlate for language switcher and theme switcher"
   }
 }
