@@ -25,9 +25,9 @@ export function LocalSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <label className="border-2 rounded">
+        <label className="border-2 rounded-2xl py-2">
           <p className="sr-only">change language</p>
-          <span className="bg-transparent p-4">{localActive}</span>
+          <span className="bg-transparent text-2xl p-4">{localActive}</span>
         </label>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

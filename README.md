@@ -54,6 +54,30 @@ function MyComponent() {
 }
 ```
 
+If you just need the OmitRTL function it is also available as a npm package
+
+# Installation
+
+```bash
+npm i react-omit-rtl
+```
+
+## Usage
+
+```
+import React from "react";
+import OmitRTL from "react-omit-rtl";
+
+function App() {
+  return (
+    <OmitRTL omitRTL={true}>
+      <p>This text will not have RTL direction.</p>
+    </OmitRTL>
+  );
+}
+export default App;
+```
+
 # Contributing
 
 If you'd like to contribute to this boilerplate, please follow these steps:
